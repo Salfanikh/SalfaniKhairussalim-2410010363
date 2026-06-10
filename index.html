@@ -8,7 +8,7 @@
         /* Gaya Dasar Halaman */
         body {
             font-family: Arial, sans-serif;
-            background-color: #f3f4f6; /* Warna latar belakang abu-abu muda */
+            background-color: #f3f4f6;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -20,46 +20,41 @@
         .container {
             background-color: white;
             width: 100%;
-            max-width: 640px; /* Batas lebar kartu agar rapi */
-            border-radius: 8px; /* Sudut melengkung */
+            max-width: 640px;
+            border-radius: 8px;
             overflow: hidden;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* Bayangan modern */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
         }
 
         /* Bagian Atas Kartu (Header Biru) */
         .header {
-            background-color: #3b82f6; /* Warna biru cerah */
+            background-color: #3b82f6;
             padding: 40px 20px;
             text-align: center;
             color: white;
         }
 
-        /* --- PERBAIKAN PENTING UNTUK GAMBAR NGEBLUR --- */
+        /* Pengaturan Gambar Profil */
         .profile-pic {
             width: 140px;
             height: 140px;
-            border-radius: 50%; /* Membuat gambar menjadi bulat */
-            border: 4px solid white; /* Bingkai putih */
-            object-fit: cover; /* Mencegah gambar terdistorsi */
-
-            /* Properti CSS untuk ketajaman rendering */
-            /* Ini akan membantu browser merender gambar dengan lebih tajam,
-               mengurangi kelembutan dari interpolasi default. */
-            image-rendering: crisp-edges;          /* Untuk Firefox */
-            image-rendering: -webkit-optimize-contrast; /* Untuk Safari dan Chrome lama */
+            border-radius: 50%;
+            border: 4px solid white;
+            object-fit: cover;
+            object-position: center; /* Memastikan fokus di tengah wajah */
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Tambahan sedikit bayangan agar elegan */
         }
-        /* --- AKHIR PERBAIKAN --- */
 
         .header h1 {
-            margin-top: 10px;
+            margin-top: 15px;
             font-size: 20px;
             font-weight: bold;
         }
 
         .header p {
             font-size: 14px;
-            color: #d1d5db; /* Warna abu-abu terang untuk teks deskripsi */
-            margin-top: -5px;
+            color: #d1d5db;
+            margin-top: 5px;
         }
 
         /* Bagian Bawah Kartu (Konten Teks) */
@@ -68,24 +63,25 @@
         }
 
         .content h2 {
-            color: #3b82f6; /* Warna judul section */
+            color: #3b82f6;
             font-size: 18px;
             font-weight: bold;
             margin-top: 0;
+            margin-bottom: 15px;
         }
 
         .content p {
-            color: #6b7280; /* Warna teks isi */
+            color: #6b7280;
             line-height: 1.6;
             font-size: 14px;
+            margin-bottom: 25px;
         }
 
         /* Grid Data Mahasiswa */
         .data-grid {
             display: grid;
-            grid-template-columns: 140px 10px 1fr;
-            gap: 10px 0px; /* Jarak antar baris */
-            margin-top: 15px;
+            grid-template-columns: 140px 15px 1fr;
+            gap: 12px 0px;
             color: #6b7280;
             font-size: 14px;
         }
@@ -93,13 +89,17 @@
         /* Label Data (Bold) */
         .data-grid div:nth-child(3n+1) {
             font-weight: bold;
-            color: #374151; /* Warna teks label */
+            color: #374151;
         }
 
         /* Tanda Titik Dua (Colon) */
         .data-grid div:nth-child(3n+2) {
-            color: #9ca3af; /* Warna colon */
+            color: #9ca3af;
             text-align: center;
+        }
+
+        .data-grid div:nth-child(3n) {
+            color: #4b5563;
         }
     </style>
 </head>
@@ -121,11 +121,10 @@
 
             <h2>Data Mahasiswa</h2>
             <div class="data-grid">
-                <!-- Data item dipisahkan dalam grid untuk rapi -->
                 <div>Nama Lengkap</div> <div>:</div> <div>Salfani khairussalim</div>
                 <div>NPM</div>          <div>:</div> <div>2410010363</div>
                 <div>Kelas</div>        <div>:</div> <div>4N REG Pagi</div>
-                <div>Email</div>        <div>:</div> <div>salfani@gmail.com</div>
+                <div>Email</div>        <div>:</div> <div>salfany152@gmail.com</div>
                 <div>Nomor HP / WA</div> <div>:</div> <div>0895401937020</div>
             </div>
         </div>
